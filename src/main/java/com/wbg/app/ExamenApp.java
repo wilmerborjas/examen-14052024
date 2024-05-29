@@ -14,9 +14,21 @@ public class ExamenApp {
 		persona.setNombre("Carlos");
 
 		Factura factura = new Factura();
-		factura.getFactura(persona, producto);
-		
-	 
+		double valorPagar = factura.getFactura(persona, producto);
+
+		double valorPagado = 20.0;
+		System.out.println("valor pagado = " + valorPagado);
+
+		if (valorPagado >= valorPagar) {
+			double cambio = valorPagado - valorPagar;
+			System.out.println("cambio = " + cambio);
+
+		} else {
+			double saldoPendiente = valorPagar - valorPagado;
+			System.out.println("saldo pendiente = " + saldoPendiente);
+
+		}
+
 	}
 
 }
