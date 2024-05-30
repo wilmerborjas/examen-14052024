@@ -8,21 +8,23 @@ public class ExamenApp {
 	public static void main(String[] args) {
 		Producto producto = new Producto();
 		producto.setCantidadProducto(4);
-		producto.setValorVenta(10.0);
+		producto.setValorVenta(100.0);
+		producto.setNombre("Celular");
 
 		Persona persona = new Persona();
-		persona.setNombre("Carlos");
+		persona.setNombre("Robin");
+		persona.setApellido("Arellano");
 
 		Factura factura = new Factura();
 		double valorPagar = factura.getFactura(persona, producto);
 
-		double valorPagado = 20.0;
+		double valorPagado = 450.0;
 		System.out.println("valor pagado = " + valorPagado);
 
 		if (valorPagado >= valorPagar) {
 			double cambio = valorPagado - valorPagar;
 			System.out.println("cambio = " + cambio);
-
+			System.out.println("gracias por su compra vuelva pronto ... ");
 		} else {
 			double saldoPendiente = valorPagar - valorPagado;
 			System.out.println("saldo pendiente = " + saldoPendiente);
